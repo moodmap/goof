@@ -119,7 +119,7 @@ Consider the following request:
 echo '{"username": "admin@snyk.io", "password": {"$gt": ""}}' | http --json $GOOF_HOST/login -v
 ```
 
-We know the username, and we pass on what seems to be an object of some sort.
+We know the username and we pass on what seems to be an object of some sort.
 That object structure is passed as-is to the `password` property and has a specific meaning to MongoDB - it uses the `$gt` operation which stands for `greater than`. So, we in essence tell MongoDB to match that username with any record that has a password that is greater than `empty string` which is bound to hit a record. This introduces the NoSQL Injection vector.
 
 #### Open redirect
