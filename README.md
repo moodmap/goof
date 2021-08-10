@@ -124,7 +124,7 @@ That object structure is passed as-is to the `password` property and has a speci
 
 #### Open redirect
 
-The `/admin` view introduces a `redirectPage` query path, as follows in the admin view:
+The `/admin` view introduces a `redirectPage` query path as follows in the admin view:
 
 ```
 <input type="hidden" name="redirectPage" value="<%- redirectPage %>" />
