@@ -130,7 +130,7 @@ The `/admin` view introduces a `redirectPage` query path as follows in the admin
 <input type="hidden" name="redirectPage" value="<%- redirectPage %>" />
 ```
 
-One fault here is that the `redirectPage` is rendered as raw HTML and not properly escaped, because it uses `<%- >` instead of `<%= >`. That itself, introduces a Cross-site Scripting (XSS) vulnerability via:
+One fault here is that the `redirectPage` is rendered as raw HTML and not properly escaped because it uses `<%- >` instead of `<%= >`. That itself, introduces a Cross-site Scripting (XSS) vulnerability via:
 
 ```
 http://localhost:3001/login?redirectPage="><script>alert(1)</script>
